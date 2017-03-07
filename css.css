@@ -107,6 +107,48 @@ nav.navbar{
   height: 600px;
 }
 
+.submain{
+
+  background-color: #f3f3f3;
+  height: 300px;
+  text-align: center;
+}
+
+.diamonddiv{
+  display: inline-block;
+}
+
+.h6diamond {
+  margin-top: 60px;
+}
+
+.diamond1 {
+
+  display: inline-block;
+	width: 0;
+	height: 0;
+	border: 50px solid transparent;
+	border-bottom-color: rgba(255, 193, 7, 0.63);
+	position: relative;
+	top: 0px;
+  margin: 0 50px 0 50px;
+
+}
+
+.diamond1:after {
+
+  display: inline-block;
+	content: '';
+	position: absolute;
+	left: -50px;
+	top: 50px;
+	width: 0;
+	height: 0;
+	border: 50px solid transparent;
+	border-top-color: rgba(255, 193, 7, 0.63);
+
+}
+
 @media screen and (max-width: 992px) {
   .nav-item{
     display: none;
