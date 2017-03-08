@@ -22,6 +22,9 @@ div.vertical-line{
       margin-right: 10px;
     }
 
+img {
+  vertical-align:baseline;
+}
 .clock {
   display: inline
 }
@@ -110,16 +113,23 @@ nav.navbar{
 .submain{
 
   background-color: #f3f3f3;
-  height: 300px;
+  height: 400px;
   text-align: center;
 }
 
 .diamonddiv{
   display: inline-block;
+  width: 20%;
+  margin: 10px;
 }
 
 .h6diamond {
   margin-top: 60px;
+  font-size: 1.1em;
+}
+
+.diamondpara {
+  font-size: .8em;
 }
 
 .diamond1 {
@@ -147,6 +157,9 @@ nav.navbar{
 	border: 50px solid transparent;
 	border-top-color: rgba(255, 193, 7, 0.63);
 
+}
+.container2 {
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 992px) {
