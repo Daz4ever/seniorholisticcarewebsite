@@ -162,6 +162,35 @@ nav.navbar{
   margin-top: 100px;
 }
 
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.paratop{
+  text-align: center;
+  margin: auto;
+  font-size: .8em;
+    margin-bottom: 50px;
+
+}
+.aboutsign{
+  text-align: center;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.para {
+  font-size: .8em;
+}
+.pic5 {
+  width: 100%;
+}
+.marginleft{
+  margin-left: 120px;
+}
+.marginright{
+  margin-right: 120px;
+}
+
 @media screen and (max-width: 992px) {
   .nav-item{
     display: none;
