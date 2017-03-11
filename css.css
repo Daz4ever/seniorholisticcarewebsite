@@ -160,6 +160,7 @@ nav.navbar{
 }
 .container2 {
   margin-top: 100px;
+
 }
 
 .col-centered{
@@ -170,7 +171,7 @@ nav.navbar{
   text-align: center;
   margin: auto;
   font-size: .8em;
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 
 }
 .aboutsign{
@@ -180,6 +181,7 @@ nav.navbar{
 }
 .para {
   font-size: .8em;
+  margin-bottom: 100px;
 }
 .pic5 {
   width: 100%;
@@ -209,14 +211,118 @@ nav.navbar{
 }
 .container3 {
   background-color: rgba(247, 185, 0, 0.25);
+  padding-bottom: 75px;
+
 }
 .marginx{
   margin-top: 100px;
 }
 
-@media screen and (max-width: 992px) {
+
+.contained {
+	width: 80%;
+	margin: 30px auto;
+	overflow: hidden;
+  text-align: center;
+}
+
+.galleryItem {
+	color: #797478;
+	font: 10px/1.5 Verdana, Helvetica, sans-serif;
+	float: left;
+  color: #797478;
+  font: 10px/1.5 Verdana, Helvetica, sans-serif;
+  float: left;
+
+  width: 16%;
+  margin:  2% 2% 50px 2%;
+}
+
+.galleryItem h3 {
+	text-transform: uppercase;
+}
+
+.galleryItem img {
+	max-width: 100%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.container5 {
+  background-color: black;
+}
+/* MEDIA QUERIES*/
+
+@media screen and (max-width: 760px) {
   .nav-item{
     display: none;
   }
+}
+@media screen and (max-width: 768px) {
 
+  .marginleft {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0 0 0;
+    text-align: center;
+}
+.marginright {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 0 0 0;
+  text-align: center;
+}
+.pad {
+  text-align: center;
+}
+  .pic5{
+    width: 60%;
+  }
+  .para{
+    width: 60%;
+  
+  }
+}
+  @media screen and (max-width: 890px) {
+    #none1, .none1{
+      display: none;
+    }
+
+  @media screen and (max-width: 760px) {
+
+    .gone{
+      display: none;
+    }
+  }
+  @media screen and (min-width: 761px) {
+    div#toggle-menu.visible {
+     display: inline-block;
+   }
+     button#goner.navbar-toggler.navbar-toggler-right{
+      display: none;
+    }
+  }
+
+@media only screen and (max-width : 940px),
+only screen and (max-device-width : 940px){
+	.galleryItem {width: 21%;}
+}
+
+@media only screen and (max-width : 720px),
+only screen and (max-device-width : 720px){
+	.galleryItem {width: 29.33333%;}
+}
+
+@media only screen and (max-width : 530px),
+only screen and (max-device-width : 530px){
+	.galleryItem {width: 46%;}
+}
+
+@media only screen and (max-width : 320px),
+only screen and (max-device-width : 320px){
+	.galleryItem {width: 96%;}
+	.galleryItem img {width: 96%;}
+	.galleryItem h3 {font-size: 18px;}
+	.galleryItem p, {font-size: 18px;}
 }
