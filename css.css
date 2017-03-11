@@ -253,6 +253,10 @@ nav.navbar{
   background-color: black;
 }
 /* MEDIA QUERIES*/
+@media screen and (max-width: 930px) {
+  .marginright {
+    margin-right: 30px;
+  }
 
 @media screen and (max-width: 760px) {
   .nav-item{
@@ -278,10 +282,13 @@ nav.navbar{
 }
   .pic5{
     width: 60%;
+    margin-bottom: 10px;
   }
   .para{
     width: 60%;
-  
+    margin: auto;
+    margin-bottom: 50px;
+
   }
 }
   @media screen and (max-width: 890px) {
