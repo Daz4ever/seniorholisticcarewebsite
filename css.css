@@ -325,7 +325,20 @@ nav.navbar{
       display: none;
     }
   }
+  @media screen and (max-width: 680px) {
+    div.diamonddiv{
+      width: 80%;
+    }
+    div.submain{
+      height: 700px;
+    }
+  }
 
+  @media screen and (max-width: 579px) {
+    div.submain{
+      height: 770px;
+    }
+  }
 @media only screen and (max-width : 940px),
 only screen and (max-device-width : 940px){
 	.galleryItem {width: 21%;}
