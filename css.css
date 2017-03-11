@@ -257,7 +257,19 @@ nav.navbar{
   .marginright {
     margin-right: 30px;
   }
+@media screen and (max-width: 850px) {
+  .diamond1 {
 
+    display: none;
+
+  }
+
+  .diamond1:after {
+
+    display: none;
+
+  }
+}
 @media screen and (max-width: 760px) {
   .nav-item{
     display: none;
@@ -289,6 +301,9 @@ nav.navbar{
     margin: auto;
     margin-bottom: 50px;
 
+  }
+  .paratop{
+    width: 60%;
   }
 }
   @media screen and (max-width: 890px) {
