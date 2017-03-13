@@ -253,6 +253,10 @@ nav.navbar{
   background-color: black;
 }
 /* MEDIA QUERIES*/
+
+@media screen and (min-width:761px) and (max-width:991px){
+
+}
 @media screen and (max-width: 930px) {
   .marginright {
     margin-right: 30px;
