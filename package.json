@@ -1,0 +1,28 @@
+{
+  "name": "holisticapp",
+  "version": "1.0.0",
+  "description": "seniorcare website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daz4ever/seniorholisticcarewebsite.git"
+  },
+  "author": "dominic zenon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Daz4ever/seniorholisticcarewebsite/issues"
+  },
+  "homepage": "https://github.com/Daz4ever/seniorholisticcarewebsite#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.0",
+    "uuid": "^3.0.1"
+  }
+}
