@@ -14,13 +14,13 @@
 }
 
 div.vertical-line{
-      width: 0px; /* Use only border style */
-      height: 45px;
-      display: inline-block;
-      border: 2px inset; /* This is default border style for <hr> tag */
-      margin-left: 10px;
-      margin-right: 10px;
-    }
+  width: 0px; /* Use only border style */
+  height: 45px;
+  display: inline-block;
+  border: 2px inset; /* This is default border style for <hr> tag */
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 img {
   vertical-align:baseline;
@@ -35,10 +35,10 @@ img {
 }
 .clocksize {
 
- height: 50px;
- width: 50px;
- -webkit-filter: invert(.8);
- filter: invert(.8);
+  height: 50px;
+  width: 50px;
+  -webkit-filter: invert(.8);
+  filter: invert(.8);
 }
 
 .tele {
@@ -53,10 +53,10 @@ img {
 }
 .telesize {
 
- height: 50px;
- width: 50px;
- -webkit-filter: invert(.8);
- filter: invert(.8);
+  height: 50px;
+  width: 50px;
+  -webkit-filter: invert(.8);
+  filter: invert(.8);
 }
 
 .pin {
@@ -71,10 +71,10 @@ img {
 }
 .pinsize {
 
- height: 50px;
- width: 30px;
- -webkit-filter: invert(.8);
- filter: invert(.8);
+  height: 50px;
+  width: 30px;
+  -webkit-filter: invert(.8);
+  filter: invert(.8);
 }
 
 .socialpic1 {
@@ -135,12 +135,12 @@ nav.navbar{
 .diamond1 {
 
   display: inline-block;
-	width: 0;
-	height: 0;
-	border: 50px solid transparent;
-	border-bottom-color: rgba(247, 185, 0, 0.25);
-	position: relative;
-	top: 0px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom-color: rgba(247, 185, 0, 0.25);
+  position: relative;
+  top: 0px;
   margin: 0 50px 0 50px;
 
 }
@@ -148,14 +148,14 @@ nav.navbar{
 .diamond1:after {
 
   display: inline-block;
-	content: '';
-	position: absolute;
-	left: -50px;
-	top: 50px;
-	width: 0;
-	height: 0;
-	border: 50px solid transparent;
-	border-top-color: rgba(255, 193, 7, 0.63);
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 50px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top-color: rgba(255, 193, 7, 0.63);
 
 }
 .container2 {
@@ -164,8 +164,8 @@ nav.navbar{
 }
 
 .col-centered{
-    float: none;
-    margin: 0 auto;
+  float: none;
+  margin: 0 auto;
 }
 .paratop{
   text-align: center;
@@ -220,16 +220,16 @@ nav.navbar{
 
 
 .contained {
-	width: 80%;
-	margin: 30px auto;
-	overflow: hidden;
+  width: 80%;
+  margin: 30px auto;
+  overflow: hidden;
   text-align: center;
 }
 
 .galleryItem {
-	color: #797478;
-	font: 10px/1.5 Verdana, Helvetica, sans-serif;
-	float: left;
+  color: #797478;
+  font: 10px/1.5 Verdana, Helvetica, sans-serif;
+  float: left;
   color: #797478;
   font: 10px/1.5 Verdana, Helvetica, sans-serif;
   float: left;
@@ -239,14 +239,14 @@ nav.navbar{
 }
 
 .galleryItem h3 {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .galleryItem img {
-	max-width: 100%;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+  max-width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .container5 {
@@ -255,12 +255,27 @@ nav.navbar{
 /* MEDIA QUERIES*/
 
 @media screen and (min-width:761px) and (max-width:991px){
+  .navbar {
+    flex-direction: row;
+  }
+  ul.navbar-nav.mr-auto{
+    flex-direction: row;
 
+  }
+  .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
+  }
+}
+@media screen and (min-width:931px) and (max-width:991px){
+  button#goner.navbar-toggler.navbar-toggler-right{
+    display: none;
+  }
 }
 @media screen and (max-width: 930px) {
-  .marginright {
-    margin-right: 30px;
-  }
+.marginright {
+  margin-right: 30px;
+}
 @media screen and (max-width: 850px) {
   .diamond1 {
 
@@ -286,16 +301,16 @@ nav.navbar{
     margin-right: 0;
     padding: 0 0 0 0;
     text-align: center;
-}
-.marginright {
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0 0 0 0;
-  text-align: center;
-}
-.pad {
-  text-align: center;
-}
+  }
+  .marginright {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0 0 0;
+    text-align: center;
+  }
+  .pad {
+    text-align: center;
+  }
   .pic5{
     width: 60%;
     margin-bottom: 10px;
@@ -310,58 +325,64 @@ nav.navbar{
     width: 60%;
   }
 }
-  @media screen and (max-width: 890px) {
-    #none1, .none1{
-      display: none;
-    }
+@media screen and (max-width: 890px) {
+  #none1, .none1{
+    display: none;
+  }
+}
+@media screen and (min-width: 930px) {
+  .navbar-light .navbar-toggler{
+    display: none;
+  }
+}
 
-  @media screen and (max-width: 760px) {
+@media screen and (max-width: 760px) {
 
-    .gone{
-      display: none;
-    }
+  .gone{
+    display: none;
   }
-  @media screen and (min-width: 761px) {
-    div#toggle-menu.visible {
-     display: inline-block;
-   }
-     button#goner.navbar-toggler.navbar-toggler-right{
-      display: none;
-    }
+}
+@media screen and (min-width: 761px) {
+  div#toggle-menu.visible {
+    display: inline-block;
   }
-  @media screen and (max-width: 680px) {
-    div.diamonddiv{
-      width: 80%;
-    }
-    div.submain{
-      height: 700px;
-    }
+  button#goner.navbar-toggler.navbar-toggler-right{
+    display: none;
   }
+}
+@media screen and (max-width: 680px) {
+  div.diamonddiv{
+    width: 80%;
+  }
+  div.submain{
+    height: 700px;
+  }
+}
 
-  @media screen and (max-width: 579px) {
-    div.submain{
-      height: 770px;
-    }
+@media screen and (max-width: 579px) {
+  div.submain{
+    height: 770px;
   }
+}
 @media only screen and (max-width : 940px),
 only screen and (max-device-width : 940px){
-	.galleryItem {width: 21%;}
+  .galleryItem {width: 21%;}
 }
 
 @media only screen and (max-width : 720px),
 only screen and (max-device-width : 720px){
-	.galleryItem {width: 29.33333%;}
+  .galleryItem {width: 29.33333%;}
 }
 
 @media only screen and (max-width : 530px),
 only screen and (max-device-width : 530px){
-	.galleryItem {width: 46%;}
+  .galleryItem {width: 46%;}
 }
 
 @media only screen and (max-width : 320px),
 only screen and (max-device-width : 320px){
-	.galleryItem {width: 96%;}
-	.galleryItem img {width: 96%;}
-	.galleryItem h3 {font-size: 18px;}
-	.galleryItem p, {font-size: 18px;}
+  .galleryItem {width: 96%;}
+  .galleryItem img {width: 96%;}
+  .galleryItem h3 {font-size: 18px;}
+  .galleryItem p, {font-size: 18px;}
 }
