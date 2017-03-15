@@ -11,3 +11,14 @@ app.config(function($stateProvider, $urlRouterProvider){
   });
   $urlRouterProvider.otherwise('/');
 });
+
+app.factory("holistic", function($http, $cookies, $rootScope, $state) {
+
+  // SERVICE VARIABLES
+
+  var service = {};
+
+
+
+
+});
