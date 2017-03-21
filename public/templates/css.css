@@ -276,7 +276,14 @@ nav.navbar{
   padding-bottom: 50px;
 }
 
+.admin{
+  background-color: #222;
+  color: lightgrey;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: .8em;
 
+}
 /* MEDIA QUERIES*/
 
 @media screen and (min-width:761px) and (max-width:991px){

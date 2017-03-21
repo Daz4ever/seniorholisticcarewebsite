@@ -16,7 +16,16 @@ mongoose.connect('mongodb://localhost/holistic_db');
 
 var randomToken = uuidV1();
 
+const User = mongoose.model('User', {
+  username: { type: String, required: true, unique: true},
+  password: { type: String, required: true },
+  token: String,
+  date: Date
+});
 
+const Form = mongoose.model('Form', {
+  first_name: {type: String}
+});
 
 
 
