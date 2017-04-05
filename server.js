@@ -24,10 +24,39 @@ const User = mongoose.model('User', {
 });
 
 const Form = mongoose.model('Form', {
-  first_name: {type: String}
+  first_name: {type: String},
+  last_name: {type: String},
+  phone_number: {type: String},
+  email_address: {type: String},
+  radio_button: {type: String},
+  questions: {type: String},
+  date: Date,
+  username: String
 });
 
-
+app.post('/contactform', function(request, response){
+  console.log("hello");
+  var formdata = request.body;
+  console.log(formdata);
+  var form = new Form({
+    first_name: formdata.first,
+    last_name: formdata.last,
+    phone_number: formdata.phone,
+    email_address: formdata.email,
+    radio_button: formdata.radio,
+    questions: formdata.anyquestions,
+    date: new Date(),
+  });
+  form.save()
+  .then(function(saved){
+    response.send(saved);
+    })
+    .catch(function(err){
+        console.log("oh NOO!!!", err.errors);
+        response.send(err.message);
+        console.log(err.stack);
+      });
+});
 
 
 

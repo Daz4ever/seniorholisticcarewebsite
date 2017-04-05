@@ -9,7 +9,7 @@
 
 
 </head>
-<body>
+<body ng-app="holistic">
   <div class="blacktop">
 
   </div>
@@ -220,73 +220,7 @@
 
 
 </div>
-<div class="container5">
-  <div class="row about" id="contacts">
-    <div class="col-md-6 col-centered marginx">
-      <h2 class="aboutsign">Contact</h2>
-      <p class="paratop">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-    </div>
-
-    </div>
-    <div class="row about">
-      <div class="col-md-12 col-lg-6">
-
-    <form class="formspace">
-  <div class="form-group">
-    <label>First Name</label>
-    <input type="text" class="form-control">
-
-  </div>
-  <div class="form-group">
-    <label>Last Name</label>
-    <input type="text" class="form-control">
-
-  </div>
-  <div class="form-group">
-    <label>Phone Number</label>
-    <input type="text" class="form-control">
-
-  </div>
-  <div class="form-group">
-    <label>Email address</label>
-    <input type="email" class="form-control">
-    <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-
-  </div>
-
-  <fieldset class="form-group">
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-        I am looking for myself.
-      </label>
-    </div>
-    <div class="form-check">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-        I am looking for a friend or relative.
-      </label>
-    </div>
-
-  </fieldset>
-
-
-
-  <div class="form-group">
-    <textarea class="form-control" id="exampleTextarea" rows="5" placeholder="Do you have a question?"></textarea>
-  </div>
-
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</div>
-<div class="col-md-12 col-lg-6 centerit">
-    <h6>Location</h6>
-      <iframe class="frame formspace" width="450" height="300" frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJtTbFzfO3woARmN5ZvUQJrkU&key=AIzaSyAiNTGZWCfhcX6m9J8-ddgNdFScaepsGDk" allowfullscreen></iframe>
-    </div>
-
-</div>
-</div>
+<div ui-view="contact"></div>
 <div class="admin">
   <a href="#">Admin Portal</a>
 </div>
