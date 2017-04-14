@@ -35,7 +35,6 @@ const Form = mongoose.model('Form', {
 });
 
 app.post('/contactform', function(request, response){
-  console.log("hello");
   var formdata = request.body;
   console.log(formdata);
   var form = new Form({

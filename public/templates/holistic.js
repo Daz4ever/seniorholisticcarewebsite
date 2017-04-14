@@ -12,6 +12,12 @@ app.config(function($stateProvider, $urlRouterProvider){
       }
     }
 
+  })
+  .state({
+    name: 'submittedforms',
+    url: '/submittedforms',
+    templateUrl: 'submittedforms.html',
+    controller: 'submittedformsController'
   });
 
   $urlRouterProvider.otherwise('/');
