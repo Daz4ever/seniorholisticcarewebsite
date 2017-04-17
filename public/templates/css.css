@@ -1,3 +1,13 @@
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+.row {
+margin-right: 0;
+margin-left: 0;
+}
+
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 .fade-in {
     opacity:0;  /* make things invisible upon start */
@@ -9,11 +19,14 @@
     animation-delay: .5s
 }
 
-
+iframe{
+  width: 80%;
+}
 nav.navbar.navbar-toggleable-md.navbar-light.bg-faded {
   position: fixed;
-  background-color: rgba(255,255,255,0);
+  background-color: rgba(255, 255, 255, 0);
 }
+
 #navbar{
   padding: 0px;
 }
@@ -191,6 +204,7 @@ nav.navbar{
 
 }
 
+
 .col-centered{
   float: none;
   margin: 0 auto;
@@ -338,6 +352,9 @@ nav.navbar{
   }
 }
 @media screen and (max-width: 760px) {
+  .nav#navbar.nav-collapse.navbar.navbar-toggleable-md.navbar-light.bg-faded{
+    background-color: rgba(255, 255, 255, 1);
+  }
   .nav-item{
     display: none;
 
