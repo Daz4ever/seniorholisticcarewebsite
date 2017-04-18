@@ -43,8 +43,9 @@ app.post('/contactform', function(request, response){
     phone_number: formdata.phone,
     email_address: formdata.email,
     radio_button: formdata.radio,
-    questions: formdata.anyquestions,
+    questions: formdata.question,
     date: new Date(),
+    username: formdata.username
   });
   form.save()
   .then(function(saved){
@@ -57,6 +58,17 @@ app.post('/contactform', function(request, response){
       });
 });
 
+app.get('/allforms', function(request, response){
+  var username = request.query.username;
+  Form.find({username: username})
+  .then(function(forms){
+    response.send(forms);
+  })
+  .catch(function(err){
+    console.log(err.errors);
+    console.log(error.stack);
+  });
+});
 
 
 app.listen(5000, function() {

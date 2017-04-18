@@ -1,0 +1,19 @@
+<div class="submitform">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="submitFormFormat" ng-repeat="form in forms">
+    <p>Contact Form: {{$index + 1}}</p>
+    <p>Date Received: {{form.date | date: MM-dd-yyyy}}</p>
+    <p>First Name: {{form.first_name}}</p>
+    <p>Last Name: {{form.last_name}}</p>
+    <p>Phone Number: {{form.phone_number}}</p>
+    <p>Email: {{form.email_address}}</p>
+    <p>Friend/Family/Self: {{form.radio_button}}</p>
+    <p>Questions: {{form.questions}}</p>
+    <a href="mailto:{{form.email_address}}">Send Email Reply</a>
+  </div>
+
+</div>

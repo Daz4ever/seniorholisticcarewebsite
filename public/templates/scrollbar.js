@@ -35,9 +35,10 @@ $(document).ready(function(){
   if (window.innerWidth >  760) {
     window.onscroll = scroll;
     function scroll() {
-      if (window.pageYOffset >= 100) {
+      if (window.pageYOffset >= 60) {
         navWhite.style.backgroundColor = "rgba(255,255,255, 1)";
         navWhite.style.boxShadow = "5px 2px 10px";
+        navWhite.style.transition = ".3s";
       }
       else {
         navWhite.style.backgroundColor = "rgba(255,255,255,0)";

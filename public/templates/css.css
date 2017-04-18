@@ -314,6 +314,20 @@ nav.navbar{
   font-size: .8em;
 
 }
+.submitform{
+  background-color: #A89B9D;
+  padding-bottom: 30px;
+}
+.submitFormFormat{
+  padding: 100px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 50%;
+  background-color: white;
+}
+
 /* MEDIA QUERIES*/
 
 @media screen and (min-width:761px) and (max-width:991px){

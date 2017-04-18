@@ -6,10 +6,20 @@ app.config(function($stateProvider, $urlRouterProvider){
   .state('root',{
     url: '/',
     views: {
+      'about': {
+        templateUrl: 'about.html'
+      },
+      'care': {
+        templateUrl: 'care.html'
+      },
+      'blog': {
+        templateUrl: 'blog.html'
+      },
       'contact': {
         templateUrl: 'contact.html',
         controller: 'contactpageController'
       }
+
     }
 
   })
@@ -34,11 +44,18 @@ app.factory('holistic', function($http, $rootScope, $state) {
       data: data
     });
   };
+  service.allforms = function(){
+    return $http ({
+      method: 'GET',
+      url: '/allforms',
+      params: {username: "dom"}
+    });
+  };
   return service;
 });
 
 app.controller('contactpageController', function($scope, holistic){
-  console.log("hello");
+
   $scope.contactsubmit = function(){
     var data = {
       first: $scope.first_name,
@@ -46,7 +63,8 @@ app.controller('contactpageController', function($scope, holistic){
       phone: $scope.phone_number,
       email: $scope.email_address,
       radio: $scope.x,
-      question: $scope.anyquestions
+      question: $scope.anyquestions,
+      username: "dom"
     };
 
     holistic.contactform(data)
@@ -57,5 +75,30 @@ app.controller('contactpageController', function($scope, holistic){
       console.log("failed");
     });
   };
+
+});
+
+app.controller('submittedformsController', function($scope, $state, holistic){
+  $state.go('submittedforms');
+  holistic.allforms()
+  .success(function(data){
+    console.log("alldata", data);
+
+    // var data2 = data.sort(function(a,b){
+    //   var c = new Date(a.date);
+    //   var d = new Date(b.date);
+    //   return c-d;
+    // });
+
+    var data2 = data.sort(function(a, b){
+      return new Date(a.date).getTime() - new Date(b.date).getTime()});
+
+    console.log("2", data2);
+    $scope.forms = data2;
+
+  })
+  .error(function(data){
+    console.log("failed");
+  });
 
 });
