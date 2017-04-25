@@ -331,6 +331,10 @@ img.mySlides{
   .nav#navbar.nav-collapse.navbar.navbar-toggleable-md.navbar-light.bg-faded{
     background-color: rgba(255, 255, 255, 1);
   }
+  div#toggle-menu.container0.visible{
+    padding-bottom: 0px;
+    margin-top: 0px;
+  }
   .nav-item{
     display: none;
 
