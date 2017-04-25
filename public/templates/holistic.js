@@ -12,8 +12,8 @@ app.config(function($stateProvider, $urlRouterProvider){
       'care': {
         templateUrl: 'care.html'
       },
-      'blog': {
-        templateUrl: 'blog.html'
+      'gallery': {
+        templateUrl: 'gallery.html'
       },
       'contact': {
         templateUrl: 'contact.html',
