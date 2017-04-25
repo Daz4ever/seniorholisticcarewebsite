@@ -51,13 +51,16 @@ $(document).ready(function(){
     navWhite.style.backgroundColor = "rgba(255,255,255, 1)";
   }
 
+  $('.nav a').click(function () {
+    $('.nav-collapse').collapse('hide');
+});
 
-  if (window.innerWidth <  760) {
-    for (var i = 0; i < navbarlinks.length; i++) {
-      navbarlinks[i].addEventListener("click", function() {
-        navbars.style.display = "none";
-      });
-    }
-  }
+  // if (window.innerWidth <  760) {
+  //   for (var i = 0; i < navbarlinks.length; i++) {
+  //     navbarlinks[i].addEventListener("click", function() {
+  //       navbars.style.display = "none";
+  //     });
+  //   }
+  // }
 
 });

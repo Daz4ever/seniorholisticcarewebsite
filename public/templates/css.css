@@ -281,6 +281,12 @@ img.mySlides{
 }
 /* MEDIA QUERIES*/
 
+@media screen and (max-width: 991px){
+  div#toggle-menu.container0.visible{
+    margin-top: 15px;
+    padding-bottom: 20px;
+  }
+}
 @media screen and (max-width: 950px){
   img.mybottom.mySlides{
     padding-bottom: 0px;
