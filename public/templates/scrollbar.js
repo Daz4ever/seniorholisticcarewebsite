@@ -32,7 +32,7 @@ $(document).ready(function(){
   var navbars = document.getElementById("navigate");
 
 
-  if (window.innerWidth >  760) {
+  if (window.innerWidth >  768) {
     window.onscroll = scroll;
     function scroll() {
       if (window.pageYOffset >= 60) {

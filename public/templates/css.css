@@ -292,7 +292,7 @@ img.mySlides{
     padding-bottom: 0px;
   }
 }
-@media screen and (min-width:761px) and (max-width:991px){
+@media screen and (min-width:769px) and (max-width:991px){
   .navbar {
     flex-direction: row;
   }
@@ -327,7 +327,7 @@ img.mySlides{
 
   }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   .nav#navbar.nav-collapse.navbar.navbar-toggleable-md.navbar-light.bg-faded{
     background-color: rgba(255, 255, 255, 1);
   }
@@ -340,7 +340,7 @@ img.mySlides{
 
   }
   button#goner{
-    margin-top: 15px;
+    margin-top: 8px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -385,13 +385,13 @@ img.mySlides{
   }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 769px) {
 
   .gone{
     display: none;
   }
 }
-@media screen and (min-width: 761px) {
+@media screen and (min-width: 769px) {
   div#toggle-menu.visible {
     display: inline-block;
 
@@ -414,26 +414,4 @@ img.mySlides{
   div.submain{
     height: 770px;
   }
-}
-@media only screen and (max-width : 940px),
-only screen and (max-device-width : 940px){
-  .galleryItem {width: 21%;}
-}
-
-@media only screen and (max-width : 720px),
-only screen and (max-device-width : 720px){
-  .galleryItem {width: 29.33333%;}
-}
-
-@media only screen and (max-width : 530px),
-only screen and (max-device-width : 530px){
-  .galleryItem {width: 46%;}
-}
-
-@media only screen and (max-width : 320px),
-only screen and (max-device-width : 320px){
-  .galleryItem {width: 96%;}
-  .galleryItem img {width: 96%;}
-  .galleryItem h3 {font-size: 18px;}
-  .galleryItem p, {font-size: 18px;}
 }
