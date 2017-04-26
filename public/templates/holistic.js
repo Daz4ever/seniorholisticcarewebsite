@@ -170,7 +170,7 @@ app.controller('submittedformsController', function($scope, $state, holistic){
   });
 
   $scope.deleteForm = function(id){
-    console.log("am I here????");
+  
     holistic.del(id)
     .success(function(data){
       console.log(data);

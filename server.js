@@ -35,8 +35,6 @@ const Form = mongoose.model('Form', {
 
 app.post('/login', function(request, response) {
    var userdata = request.body;
-   console.log("XXXXXXXXXX", userdata);
-  
    User.findOne({ username: userdata.username, password: userdata.password})
    .then(function(user){
      if(userdata.password === "holistic12345"){
@@ -46,7 +44,7 @@ app.post('/login', function(request, response) {
          response.send(user);
        })
        .catch(function(err){
-         console.log('OMG ERROR: ', err.message);
+         console.log('ERROR: ', err.message);
        });
      }
      else{
@@ -94,9 +92,7 @@ function auth(request, response, next) {
    }
    User.findOne({token: token})
    .then(function(user){
-     console.log("k", token);
-     console.log("k2", user.token);
-     console.log('k3', user);
+
      if(user.token === token) {
 
        next();

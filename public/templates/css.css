@@ -18,6 +18,9 @@ margin-left: 0;
     animation-duration:1s;
     animation-delay: .5s
 }
+
+
+
 .signuploginform {
 
   max-width: 400px;
@@ -56,6 +59,7 @@ iframe{
 nav.navbar.navbar-toggleable-md.navbar-light.bg-faded {
   position: fixed;
   background-color: rgba(255, 255, 255, 0);
+  z-index: 99;
 }
 
 #navbar{
@@ -338,7 +342,7 @@ img.mySlides{
     display: none;
   }
 }
-@media screen and (min-width:769px) and (max-width:1030px){
+@media screen and (min-width:769px) and (max-width:900px){
   a.navbar-brand{
     display: none;
   }

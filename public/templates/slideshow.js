@@ -39,4 +39,5 @@ $(document).ready(function(){
   document.getElementById("forward").addEventListener("click", function(){
     plusDivs(1);
   });
+
 });
