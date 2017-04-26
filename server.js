@@ -36,10 +36,11 @@ const Form = mongoose.model('Form', {
 app.post('/login', function(request, response) {
    var userdata = request.body;
    console.log("XXXXXXXXXX", userdata);
+  
    User.findOne({ username: userdata.username, password: userdata.password})
    .then(function(user){
-     if(user.password === "holistic12345"){
-       user.token = randomToken;
+     if(userdata.password === "holistic12345"){
+       userdata.token = randomToken;
        return user.save()
        .then(function(user){
          response.send(user);

@@ -1,4 +1,4 @@
-var app = angular.module('holistic',['ui.router', 'ngAnimate']);
+var app = angular.module('holistic',['ui.router', 'ngAnimate', 'ngCookies']);
 
 app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider
@@ -41,24 +41,24 @@ app.config(function($stateProvider, $urlRouterProvider){
 
 app.factory('holistic', function($http, $rootScope, $state, $cookies) {
 
-  // $rootScope.cookieData = null;
-  // $rootScope.cookieData = $cookies.getObject('cookieData');
-  // console.log("Printing initial cookie", $rootScope.cookieData);
-  //
-  // if ($rootScope.cookieData) {
-  // $rootScope.auth = $rootScope.cookieData.token;
-  // $rootScope.username = $rootScope.cookieData.username;
-  // console.log("GET HERE PLEASE", $rootScope.auth);
-  //   console.log("GET HERE PLEASE 2", $rootScope.username);
-  //
-  // }
-  //
-  // $rootScope.logout = function(){
-  //   $cookies.remove('cookieData');
-  //   $rootScope.cookieData = null;
-  //   $rootScope.username = null;
-  //   $rootScope.auth = null;
-  // };
+  $rootScope.cookieData = null;
+  $rootScope.cookieData = $cookies.getObject('cookieData');
+  console.log("Printing initial cookie", $rootScope.cookieData);
+
+  if ($rootScope.cookieData) {
+  $rootScope.auth = $rootScope.cookieData.token;
+  $rootScope.username = $rootScope.cookieData.username;
+  console.log("GET HERE PLEASE", $rootScope.auth);
+    console.log("GET HERE PLEASE 2", $rootScope.username);
+
+  }
+
+  $rootScope.logout = function(){
+    $cookies.remove('cookieData');
+    $rootScope.cookieData = null;
+    $rootScope.username = null;
+    $rootScope.auth = null;
+  };
 
   var service = {};
 
@@ -83,19 +83,26 @@ app.factory('holistic', function($http, $rootScope, $state, $cookies) {
       data: {id: id, username: $rootScope.username, token: $rootScope.auth}
     });
   };
+  service.login = function(loginInfo){
+    return $http ({
+      method: 'POST',
+      url: '/login',
+      data: loginInfo
+    });
+  };
   return service;
 });
 
-app.controller('loginController', function($scope, holistic, $cookies, $rootScope){
+app.controller('loginController', function($timeout, $scope, holistic,$state, $cookies, $rootScope){
   $scope.login = function(){
   loginInfo = {
     username: "admin",
     password: $scope.password
   };
 
-  foodlog.login(loginInfo)
+  holistic.login(loginInfo)
   .error(function(data){
-    console.log("failed");
+    console.log(data);
     $scope.loginfailed = true;
     $timeout(function(){$scope.loginfailed = false;}, 2500);
 

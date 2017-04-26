@@ -24,21 +24,27 @@
       <li class="one nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="two nav-item">
+      <li class="one nav-item">
         <a class="nav-link" href="#about">About</a>
       </li>
-      <li class="three nav-item">
+      <li class="one nav-item">
         <a class="nav-link" href="#care">Services</a>
       </li>
-      <li class="four nav-item">
+      <li class="one nav-item">
         <a class="nav-link" href="#gallery">Gallery</a>
       </li>
-      <li class="five nav-item">
+      <li class="one nav-item">
         <a class="nav-link" href="#">Blog</a>
       </li>
-      <li class="six nav-item">
+      <li class="one nav-item">
         <a class="nav-link" href="#contacts">Contact</a>
       </li>
+      <li class="one nav-item" ng-if="username" class="right">
+      <a class="nav-link" ui-sref="submittedforms">Admin</a>
+    </li>
+      <li class="one nav-item" ng-if="username" class="right">
+      <a class="nav-link" ng-click="logout()" ui-sref="root">Logout</a>
+    </li>
     </ul>
   </div>
 </nav>
