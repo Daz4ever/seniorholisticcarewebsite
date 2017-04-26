@@ -19,8 +19,7 @@ var randomToken = uuidV1();
 const User = mongoose.model('User', {
   username: { type: String, required: true, unique: true},
   password: { type: String, required: true },
-  token: String,
-  date: Date
+  token: String
 });
 
 const Form = mongoose.model('Form', {
@@ -32,6 +31,29 @@ const Form = mongoose.model('Form', {
   questions: {type: String},
   date: Date,
   username: String
+});
+
+app.post('/login', function(request, response) {
+   var userdata = request.body;
+   console.log("XXXXXXXXXX", userdata);
+   User.findOne({ username: userdata.username, password: userdata.password})
+   .then(function(user){
+     if(user.password === "holistic12345"){
+       user.token = randomToken;
+       return user.save()
+       .then(function(user){
+         response.send(user);
+       })
+       .catch(function(err){
+         console.log('OMG ERROR: ', err.message);
+       });
+     }
+     else{
+       console.log("Login Failed");
+       response.status(401);
+       response.send('Login Failed');
+     }
+   });
 });
 
 app.post('/contactform', function(request, response){
@@ -58,6 +80,34 @@ app.post('/contactform', function(request, response){
       });
 });
 
+
+
+function auth(request, response, next) {
+   //verify auth token
+   console.log(request.method, request.path);
+   var token = request.query.token;
+   if (!token) {
+     response.status(401);
+     response.json({error: "you are not logged in"});
+     return;
+   }
+   User.findOne({token: token})
+   .then(function(user){
+     console.log("k", token);
+     console.log("k2", user.token);
+     console.log('k3', user);
+     if(user.token === token) {
+
+       next();
+     } else {
+       response.status(401);
+       response.json({error: "you are not logged in"});
+     }
+
+
+ });
+ }
+
 app.get('/allforms', function(request, response){
   var username = request.query.username;
   Form.find({username: username})
@@ -67,6 +117,18 @@ app.get('/allforms', function(request, response){
   .catch(function(err){
     console.log(err.errors);
     console.log(error.stack);
+  });
+});
+
+app.post('/delete', function(request, response){
+  var id = request.body.id;
+  console.log("heres the id", id);
+  return Form.remove({_id: id})
+  .then(function(){
+    response.send("success");
+  })
+  .catch(function(){
+    console.log(err.errors);
   });
 });
 

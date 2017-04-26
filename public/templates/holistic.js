@@ -28,12 +28,37 @@ app.config(function($stateProvider, $urlRouterProvider){
     url: '/submittedforms',
     templateUrl: 'submittedforms.html',
     controller: 'submittedformsController'
+  })
+  .state({
+    name: 'login',
+    url: '/login',
+    templateUrl: 'login.html',
+    controller: 'loginController'
   });
 
   $urlRouterProvider.otherwise('/');
 });
 
-app.factory('holistic', function($http, $rootScope, $state) {
+app.factory('holistic', function($http, $rootScope, $state, $cookies) {
+
+  // $rootScope.cookieData = null;
+  // $rootScope.cookieData = $cookies.getObject('cookieData');
+  // console.log("Printing initial cookie", $rootScope.cookieData);
+  //
+  // if ($rootScope.cookieData) {
+  // $rootScope.auth = $rootScope.cookieData.token;
+  // $rootScope.username = $rootScope.cookieData.username;
+  // console.log("GET HERE PLEASE", $rootScope.auth);
+  //   console.log("GET HERE PLEASE 2", $rootScope.username);
+  //
+  // }
+  //
+  // $rootScope.logout = function(){
+  //   $cookies.remove('cookieData');
+  //   $rootScope.cookieData = null;
+  //   $rootScope.username = null;
+  //   $rootScope.auth = null;
+  // };
 
   var service = {};
 
@@ -48,10 +73,46 @@ app.factory('holistic', function($http, $rootScope, $state) {
     return $http ({
       method: 'GET',
       url: '/allforms',
-      params: {username: "dom"}
+      params: {username: $rootScope.username, token: $rootScope.auth}
+    });
+  };
+  service.del = function(id){
+    return $http ({
+      method: 'POST',
+      url: '/delete',
+      data: {id: id, username: $rootScope.username, token: $rootScope.auth}
     });
   };
   return service;
+});
+
+app.controller('loginController', function($scope, holistic, $cookies, $rootScope){
+  $scope.login = function(){
+  loginInfo = {
+    username: "admin",
+    password: $scope.password
+  };
+
+  foodlog.login(loginInfo)
+  .error(function(data){
+    console.log("failed");
+    $scope.loginfailed = true;
+    $timeout(function(){$scope.loginfailed = false;}, 2500);
+
+
+  })
+  .success(function(data){
+    console.log(data);
+    $cookies.putObject('cookieData', data);
+    console.log("ADDED COOKIE");
+    $rootScope.username = data.username;
+    $rootScope.auth = data.token;
+    console.log('Hello', $rootScope.username);
+
+    $state.go('submittedforms');
+  });
+};
+
 });
 
 app.controller('contactpageController', function($scope, holistic){
@@ -64,7 +125,7 @@ app.controller('contactpageController', function($scope, holistic){
       email: $scope.email_address,
       radio: $scope.x,
       question: $scope.anyquestions,
-      username: "dom"
+      username: "admin"
     };
 
     holistic.contactform(data)
@@ -101,4 +162,15 @@ app.controller('submittedformsController', function($scope, $state, holistic){
     console.log("failed");
   });
 
+  $scope.deleteForm = function(id){
+    console.log("am I here????");
+    holistic.del(id)
+    .success(function(data){
+      console.log(data);
+      $state.reload();
+    })
+    .error(function(data){
+      console.log("failed");
+    });
+  };
 });

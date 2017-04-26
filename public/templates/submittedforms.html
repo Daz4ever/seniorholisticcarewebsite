@@ -14,6 +14,10 @@
     <p>Friend/Family/Self: {{form.radio_button}}</p>
     <p>Questions: {{form.questions}}</p>
     <a href="mailto:{{form.email_address}}">Send Email Reply</a>
+    <br>
+    <br>
+    <button ng-click="deleteForm(form._id)" type="button" name="button" class="btn btn-danger">Delete</button>
+  </div>
   </div>
 
 </div>
