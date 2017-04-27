@@ -18,6 +18,31 @@ margin-left: 0;
     animation-duration:1s;
     animation-delay: .5s
 }
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.carousel-cell img {
+  display: block;
+  height: 200px;
+}
+
+div.flickity-viewport{
+  margin-bottom: 120px;
+}
+
+
 .centerme{
   text-align: center;
   padding-bottom: 100px;
@@ -203,6 +228,12 @@ nav.navbar{
   margin-top: 100px;
 
 }
+div.col-md-3.col-centered{
+padding:0px;
+}
+img.pic5{
+  margin-left: 0px;
+}
 
 
 .col-centered{
@@ -331,8 +362,26 @@ img.mySlides{
   text-align: center;
   padding: 30px 0 30px 0;
 }
+
+.para2{
+  margin: auto;
+  font-size: .8em;
+  padding-bottom: 20px;
+}
+li.fun{
+  margin: auto;
+  font-size: .8em;
+
+}
+
+
 /* MEDIA QUERIES*/
 
+@media screen and ( min-width: 768px ) {
+  .carousel-cell img {
+    height: 400px;
+  }
+}
 @media screen and (max-width: 651px){
   div.parallax.ng-scope{
     display:none;
@@ -340,7 +389,7 @@ img.mySlides{
 }
 @media screen and (max-width: 650px){
   img.nonparallax{
-    display:block;
+    display:none;
     width:100%;
   }
 }
@@ -391,6 +440,11 @@ img.mySlides{
     padding-left: 10px;
   }
 }
+@media screen and (min-width:768px) and (max-width:768px){
+  div.omg.row.center.ng-scope{
+    margin-left: 100px;
+  }
+}
 @media screen and (max-width: 930px) {
 .marginright {
   margin-right: 30px;
@@ -408,6 +462,7 @@ img.mySlides{
 
   }
 }
+
 @media screen and (max-width: 768px) {
   .nav#navbar.nav-collapse.navbar.navbar-toggleable-md.navbar-light.bg-faded{
     background-color: rgba(255, 255, 255, 1);
@@ -445,17 +500,30 @@ img.mySlides{
     text-align: center;
   }
   .pic5{
-    width: 60%;
+    width: 100%;
     margin-bottom: 10px;
   }
   .para{
     width: 60%;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 75px;
 
   }
-  .paratop{
+  .para2{
     width: 60%;
+    margin: auto;
+    font-size: .8em;
+  }
+  li.fun{
+    margin: auto;
+    width: 60%;
+    font-size: .8em;
+    list-style-type: none;
+
+  }
+  p.paratop{
+    width: 60%;
+    margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 890px) {

@@ -122,7 +122,13 @@ app.controller('loginController', function($timeout, $scope, holistic,$state, $c
 
 });
 
-app.controller('contactpageController', function($scope, holistic){
+app.controller('contactpageController', function($location, $anchorScroll, $scope, holistic){
+
+ //  $scope.scrollTo = function(id) {
+ //   $location.hash(id);
+ //   console.log($location.hash());
+ //   $anchorScroll();
+ // };
 
   $scope.notHidden = true;
   $scope.thankYou = false;
