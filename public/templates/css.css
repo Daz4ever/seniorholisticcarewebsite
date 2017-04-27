@@ -18,9 +18,29 @@ margin-left: 0;
     animation-duration:1s;
     animation-delay: .5s
 }
+.centerme{
+  text-align: center;
+  padding-bottom: 100px;
 
+}
+.parallax {
+    /* The image used */
+    background-image: url("pics/unspecified2.jpg");
 
+    /* Set a specific height */
+    min-height: 600px;
 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: 0px 100px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+.nonparallax{
+  display: none;
+
+}
 .signuploginform {
 
   max-width: 400px;
@@ -297,7 +317,7 @@ nav.navbar{
   margin-left: 20px;
   border: 2px solid black;
   border-radius: 15px;
-  width: 50%;
+  width: 65%;
   background-color: white;
 }
 
@@ -313,6 +333,24 @@ img.mySlides{
 }
 /* MEDIA QUERIES*/
 
+@media screen and (max-width: 651px){
+  div.parallax.ng-scope{
+    display:none;
+  }
+}
+@media screen and (max-width: 650px){
+  img.nonparallax{
+    display:block;
+    width:100%;
+  }
+}
+@media screen and (min-width:651px) and (max-width:900px){
+  div.parallax.ng-scope{
+    display: block;
+    background-size: 140%;
+    background-position: -40px 100px;
+  }
+}
 @media screen and (max-width: 991px){
   div#toggle-menu.container0.visible{
     margin-top: 15px;
@@ -382,6 +420,9 @@ img.mySlides{
     display: none;
 
   }
+  div.submitFormFormat.ng-scope{
+    width:95%;
+  }
   button#goner{
     margin-top: 8px;
   }
@@ -450,6 +491,9 @@ img.mySlides{
   }
   div.submain{
     height: 700px;
+  }
+  .lilsmaller{
+    font-size: 1em;
   }
 }
 

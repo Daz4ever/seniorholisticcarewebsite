@@ -124,6 +124,8 @@ app.controller('loginController', function($timeout, $scope, holistic,$state, $c
 
 app.controller('contactpageController', function($scope, holistic){
 
+  $scope.notHidden = true;
+  $scope.thankYou = false;
   $scope.contactsubmit = function(){
     var data = {
       first: $scope.first_name,
@@ -138,6 +140,8 @@ app.controller('contactpageController', function($scope, holistic){
     holistic.contactform(data)
     .success(function(data){
       console.log("here", data);
+      $scope.notHidden = false;
+      $scope.thankYou = true;
     })
     .error(function(data){
       console.log("failed");
@@ -170,7 +174,7 @@ app.controller('submittedformsController', function($scope, $state, holistic){
   });
 
   $scope.deleteForm = function(id){
-  
+
     holistic.del(id)
     .success(function(data){
       console.log(data);

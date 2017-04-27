@@ -8,8 +8,17 @@
     </div>
     <div class="row about">
       <div class="col-md-12 col-lg-6">
-
-    <form class="formspace">
+        <div ng-show="thankYou" class="centerme">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2 class="lilsmaller">Thank you. We will contact you shortly.</h2>
+              </div>
+            <form ng-show="notHidden" class="formspace">
   <div class="form-group">
     <label>First Name</label>
     <input ng-model="first_name" name="first" type="text" class="form-control">
