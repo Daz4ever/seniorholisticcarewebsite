@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HolisticCare</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="css.css">
 
@@ -12,47 +12,126 @@
 </head>
 <body ng-app="holistic">
 
+  <!-- Static navbar -->
+      <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img class="logo" src="pics/holistic-logo.png" alt="holistic care logo"/></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="one nav-item">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="one nav-item">
+                <a class="nav-link" href="#about" data-toggle="collapse" data-target=".navbar-collapse">About</a>
+              </li>
+              <li class="one nav-item">
+                <a class="nav-link" href="#care" data-toggle="collapse" data-target=".navbar-collapse">Services</a>
+              </li>
+              <li class="one nav-item">
+                <a class="nav-link" href="#gallery" data-toggle="collapse" data-target=".navbar-collapse">Gallery</a>
+              </li>
+              <li class="one nav-item">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target=".navbar-collapse">Blog</a>
+              </li>
+              <li class="one nav-item">
+                <a class="nav-link" href="#contact" data-toggle="collapse" data-target=".navbar-collapse">Contact</a>
+              </li>
+              <li class="one nav-item" ng-if="username" class="right">
+              <a class="nav-link" ui-sref="submittedforms" data-toggle="collapse" data-target=".navbar-collapse">Admin</a>
+            </li>
+              <li class="one nav-item" ng-if="username" class="right">
+              <a class="nav-link" ng-click="logout()" ui-sref="root" data-toggle="collapse" data-target=".navbar-collapse">Logout</a>
+            </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
 
 
-  <nav id="navbar" class="nav-collapse navbar navbar-toggleable-md navbar-light bg-faded" data-target=".nav-collapse">
-  <button class="navbar-toggler navbar-toggler-right" id="goner" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon here"></span>
-  </button>
-  <a class="navbar-brand" href="#"><img class="logo" src="pics/hsclogo1.png" alt="none"></a>
-  <div class="container0 visible" id="toggle-menu">
-    <ul id="navigate" class="navbar-nav mr-auto nav">
-      <li class="one nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="one nav-item">
-        <a class="nav-link" href="#about">About</a>
-      </li>
-      <li class="one nav-item">
-        <a class="nav-link" href="#care">Services</a>
-      </li>
-      <li class="one nav-item">
-        <a class="nav-link" href="#gallery">Gallery</a>
-      </li>
-      <li class="one nav-item">
-        <a class="nav-link" href="#">Blog</a>
-      </li>
-      <li class="one nav-item">
-        <a class="nav-link" href="#contact">Contact</a>
-      </li>
-      <li class="one nav-item" ng-if="username" class="right">
-      <a class="nav-link" ui-sref="submittedforms">Admin</a>
-    </li>
-      <li class="one nav-item" ng-if="username" class="right">
-      <a class="nav-link" ng-click="logout()" ui-sref="root">Logout</a>
-    </li>
-    </ul>
-  </div>
-</nav>
 
 <main ui-view></main>
 <div ui-view="about"></div>
 <div ui-view="care"></div>
-<div ui-view="gallery"></div>
+
+<div>
+  <div class="container4">
+    <div class="row about" id="gallery">
+      <div class="col-md-6 col-centered marginx">
+        <h2 class="aboutsign">Gallery</h2>
+        <p class="paratop">Our residential care centers are designed, remodeled and retrofitted homes, within
+        the community, that is convenient for family members, relatives and friends to visit and spend quality
+        time with their loved ones.</p>
+      </div>
+      </div>
+
+
+
+  <div class="carousel">
+    <div class="carousel-cell">
+      <img src="pics/pic3.3.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic3.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic2.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic4.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic5.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic6.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic7.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic9.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic10.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic11.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic12.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic13.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic14.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic15.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic16.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic17.jpg" alt="" />
+    </div>
+    <div class="carousel-cell">
+      <img src="pics/pic18.jpg" alt="" />
+    </div>
+
+  </div>
+
+  </div>
+
+</div>
 <div ui-view="contact"></div>
 
 

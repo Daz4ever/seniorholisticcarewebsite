@@ -101,30 +101,55 @@ fieldset.form-group{
 iframe{
   width: 80%;
 }
+
+.navbar-brand{
+  height: 80px;
+  padding: 10px 15px;
+}
+
+.navbar-brand img{
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
 nav.navbar.navbar-toggleable-md.navbar-light.bg-faded {
   position: fixed;
   background-color: rgba(255, 255, 255, 0);
   z-index: 99;
 }
 
-#navbar{
-  padding: 0px;
-}
-.logo{
-  width: 50%;
-  margin-top: 10px;
+.navbar-default{
+  background-color: transparent;
+  border: none;
 }
 
-li.nav-item{
-  padding-left: 20px;
-  padding-right: 20px;
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+  background-color: rgba(255,255,255,0);
 }
-a.navbar-brand{
-  width: 50%;
+.navbar-default .navbar-right{
+  padding-right: 30px;
 }
-div#toggle-menu.visible{
-  margin-top: 0px;
+
+.centered-images{
+  display:block;
+  margin: auto;
 }
+
+.centered-images p{
+  padding: 20px 10px;
+  margin-bottom: 1.5em;
+}
+
+.navbar-default .navbar-nav>li>a{
+  color: black;
+  padding: 30px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+  color: red;
+}
+
 .whitespace {
 
   height: 20px;
@@ -166,13 +191,6 @@ img {
   width: 25px;
   -webkit-transform: translateY(-40%);
 
-}
-
-nav.navbar{
-  background-color: white;
-  z-index: 2;
-  position: absolute;
-  width: 100%;
 }
 
 
