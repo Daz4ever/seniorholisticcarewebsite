@@ -423,7 +423,7 @@ div.navbar-header{
     margin-left: 20px;
   }
 }
-@media screen and ( max-width: 768px ) {
+@media screen and ( min-width: 768px ) {
   .carousel-cell img {
     height: 400px;
   }

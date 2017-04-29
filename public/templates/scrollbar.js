@@ -1,20 +1,5 @@
 $(document).ready(function(){
 
-//   $(document).on('click','.navbar-collapse.in',function(e) {
-//     if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
-//         $(this).collapse('hide');
-//     }
-// });
-/*
-  $(".here").click(function(){
-    $(".nav-item").slideToggle(250);
-
-  });
-
-  $('.nav-item').click(function () {
-    $('#toggle-menu').collapse('hide');
-  });
-*/
 
 
   $(function() {
@@ -41,8 +26,6 @@ $(document).ready(function(){
 
   var navWhite = document.getElementById("navbar");
   var navWhite2 = document.getElementById("navbar2")
-  // var navbarlinks = document.querySelectorAll(".nav-item");
-  // var navbars = document.getElementById("navigate");
 
 
   if (window.innerWidth >  768) {
