@@ -40,6 +40,7 @@ $(document).ready(function(){
 
 
   var navWhite = document.getElementById("navbar");
+  var navWhite2 = document.getElementById("navbar2")
   // var navbarlinks = document.querySelectorAll(".nav-item");
   // var navbars = document.getElementById("navigate");
 
@@ -64,6 +65,8 @@ $(document).ready(function(){
   }
   else{
     navWhite.style.backgroundColor = "rgba(255,255,255, 1)";
+    navWhite2.style.backgroundColor = "rgba(255,255,255, 1)";
+
   }
 
 
