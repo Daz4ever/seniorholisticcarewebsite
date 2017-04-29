@@ -10,7 +10,7 @@ $(document).ready(function(){
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
           var thetop = target.offset().top;
-          var finaltop = thetop-100;
+          var finaltop = thetop-90;
           $('html, body').animate({
             scrollTop: finaltop
           }, 1000);

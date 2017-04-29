@@ -12,7 +12,6 @@ app.config(function($stateProvider, $urlRouterProvider){
       'care': {
         templateUrl: 'care.html'
       },
-
       'contact': {
         templateUrl: 'contact.html',
         controller: 'contactpageController'
@@ -39,6 +38,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 
 app.factory('holistic', function($http, $rootScope, $state, $cookies) {
 
+  $rootScope.showIt = true;
   $rootScope.cookieData = null;
   $rootScope.cookieData = $cookies.getObject('cookieData');
   console.log("Printing initial cookie", $rootScope.cookieData);
@@ -56,6 +56,7 @@ app.factory('holistic', function($http, $rootScope, $state, $cookies) {
     $rootScope.cookieData = null;
     $rootScope.username = null;
     $rootScope.auth = null;
+    $rootScope.showIt = true;
   };
 
   var service = {};
@@ -120,13 +121,13 @@ app.controller('loginController', function($timeout, $scope, holistic,$state, $c
 
 });
 
-app.controller('contactpageController', function($location, $anchorScroll, $scope, holistic){
+app.controller('contactpageController', function($rootScope, $location, $anchorScroll, $scope, $state, holistic){
 
- //  $scope.scrollTo = function(id) {
- //   $location.hash(id);
- //   console.log($location.hash());
- //   $anchorScroll();
- // };
+  $scope.show
+  $scope.hidden = function(){
+    $rootScope.showIt = false;
+    $state.go('login');
+  };
 
   $scope.notHidden = true;
   $scope.thankYou = false;

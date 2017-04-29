@@ -194,7 +194,7 @@ img {
 }
 
 div.container.ng-scope{
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 div.col-sm-12.col-md-5.col-lg-3.col-centered{
   padding: 0px;
@@ -274,6 +274,9 @@ img.pic5{
   text-align: center;
   margin: auto;
   margin-bottom: 50px;
+}
+.omg2{
+  margin-top: 20px;
 }
 .para {
   font-size: .8em;
