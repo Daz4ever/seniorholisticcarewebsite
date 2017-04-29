@@ -616,3 +616,9 @@ div.navbar-header{
     height: 770px;
   }
 }
+
+@media screen and (max-width: 443px) {
+  ol.flickity-page-dots{
+    bottom: -35px;
+  }
+}
