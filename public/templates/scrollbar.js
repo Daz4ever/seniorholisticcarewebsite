@@ -1,5 +1,20 @@
 $(document).ready(function(){
 
+//   $(document).on('click','.navbar-collapse.in',function(e) {
+//     if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+//         $(this).collapse('hide');
+//     }
+// });
+/*
+  $(".here").click(function(){
+    $(".nav-item").slideToggle(250);
+
+  });
+
+  $('.nav-item').click(function () {
+    $('#toggle-menu').collapse('hide');
+  });
+*/
 
 
   $(function() {
@@ -10,7 +25,7 @@ $(document).ready(function(){
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
           var thetop = target.offset().top;
-          var finaltop = thetop-90;
+          var finaltop = thetop-100;
           $('html, body').animate({
             scrollTop: finaltop
           }, 1000);
@@ -26,6 +41,8 @@ $(document).ready(function(){
 
   var navWhite = document.getElementById("navbar");
   var navWhite2 = document.getElementById("navbar2")
+  // var navbarlinks = document.querySelectorAll(".nav-item");
+  // var navbars = document.getElementById("navigate");
 
 
   if (window.innerWidth >  768) {
@@ -48,9 +65,16 @@ $(document).ready(function(){
   }
   else{
     navWhite.style.backgroundColor = "rgba(255,255,255, 1)";
+    window.onscroll = scroll;
+    function scroll() {
+        if (window.pageYOffset >= 10) {
     navWhite2.style.backgroundColor = "rgba(255,255,255, 1)";
-
   }
+}
+document.getElementById("clickwhite").addEventListener("click", function(){
+  navWhite2.style.backgroundColor = "rgba(255,255,255, 1)";
+});
+}
 
 
 
