@@ -6,10 +6,10 @@ const bodyParser = require('body-parser');
 const app = express();
 const bcrypt = require('bcrypt');
 const uuidV1 = require('uuid/v1');
-const env = require('dotenv').config();
-var pass = {
-  password: process.env.PASS
-};
+// const env = require('dotenv').config();
+// var pass = {
+//   password: process.env.PASS
+// };
 
 app.use(express.static('public/templates'));
 app.use(bodyParser.json());
@@ -41,7 +41,7 @@ app.post('/login', function(request, response) {
    var userdata = request.body;
    User.findOne({ username: userdata.username, password: userdata.password})
    .then(function(user){
-     if(userdata.password === pass.password){
+     if(userdata.password === "holistic12345"){
        userdata.token = randomToken;
        return user.save()
        .then(function(user){
