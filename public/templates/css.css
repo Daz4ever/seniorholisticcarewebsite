@@ -24,7 +24,7 @@ margin-left: 0;
 
 body { font-family: sans-serif; }
 
-.carousel {
+/*.carousel {
   background: #EEE;
 }
 
@@ -40,9 +40,11 @@ body { font-family: sans-serif; }
 
 div.flickity-viewport{
   margin-bottom: 120px;
+}*/
+
+form.formspace.ng-pristine.ng-valid.ng-valid-email a {
+  color: lightgrey;
 }
-
-
 .centerme{
   text-align: center;
   padding-bottom: 100px;
@@ -394,9 +396,10 @@ img.mySlides{
   font-size: .8em;
   padding-bottom: 20px;
 }
-li.fun{
+.fun{
   margin: auto;
   font-size: .8em;
+
 
 }
 div.navbar-header{
@@ -471,6 +474,38 @@ div.navbar-header{
   .navbar-nav .nav-link {
     padding-right: .5rem;
     padding-left: .5rem;
+  }
+  img.fix.pic5{
+    width: 50%
+  }
+  li.fun{
+    list-style-type: none;
+  }
+  p.paratop{
+    width: 60%;
+  }
+  p.para{
+    width: 50%;
+    margin:auto;
+    margin-bottom: 50px;
+  }
+  div.col-sm-12.col-md-4{
+    text-align: center;
+    width: 100%;
+  }
+}
+@media screen and (min-width:851px) and (max-width:991px){
+  div.submain.ng-scope{
+    height: 550px;
+  }
+
+}
+@media screen and (max-width: 767px){
+  div.submain.ng-scope{
+    height: 550px;
+  }
+  li.fun{
+    list-style-type: disc;
   }
 }
 @media screen and (min-width:931px) and (max-width:991px){

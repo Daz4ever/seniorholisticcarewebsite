@@ -222,6 +222,7 @@
 
 /* captions, styled fo the overlay variant */
 .sy-caption-wrap {
+  display: none;
   position: absolute;
   bottom: 2em;
   z-index: 12;
@@ -258,6 +259,11 @@
   padding: 0;
   list-style: none;
   text-align: center; }
+  @media screen and ( max-width: 768px ) {
+    .sy-pager {
+      font-size: 8px;
+    }
+  }
   .sy-pager li {
     display: inline-block;
     width: 1.2em;
