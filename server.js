@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const bcrypt = require('bcrypt');
 const uuidV1 = require('uuid/v1');
+const config = require('./config');
 // const env = require('dotenv').config();
 // var pass = {
 //   password: process.env.PASS
@@ -19,6 +20,7 @@ const ObjectId = mongoose.Schema.ObjectId;
 mongoose.connect('mongodb://localhost/holistic_db');
 
 var randomToken = uuidV1();
+var hiddenPassword = config.pass;
 
 const User = mongoose.model('User', {
   username: { type: String, required: true, unique: true},
@@ -41,7 +43,7 @@ app.post('/login', function(request, response) {
    var userdata = request.body;
    User.findOne({ username: userdata.username, password: userdata.password})
    .then(function(user){
-     if(userdata.password === "holistic12345"){
+     if(userdata.password === hiddenPassword){
        userdata.token = randomToken;
        return user.save()
        .then(function(user){
